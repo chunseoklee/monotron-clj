@@ -1,11 +1,12 @@
 # monotron-clj
 
-A Clojure library designed to ... well, that part is up to you.
+monotron implementation on swing UI + overtone
 
 ## Usage
 
-FIXME
-
+```
+$ lein run -m monotron-clj.core
+```
 ## License
 
 Copyright © 2018 FIXME
