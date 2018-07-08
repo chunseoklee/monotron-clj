@@ -2,11 +2,17 @@
   (:use overtone.live)
   (:require [seesaw.core]))
 
+(def f 
+  (seesaw.core/frame :title "Hello",
+	:content "Monoroton",
+	:on-close :exit))
+
+(seesaw.core/listen f
+  :key-pressed (fn [e] (println "key pressed")))
+
 (defn -main [& args]
   (seesaw.core/invoke-later
-   (-> (seesaw.core/frame :title "Hello",
-           :content "Hello, Seesaw",
-           :on-close :exit)
+   (-> f
        seesaw.core/pack!
        seesaw.core/show!))
   (demo 4 (saw))
